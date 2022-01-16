@@ -1,8 +1,9 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   lowerContainer: {
-    margin: 15,
+    height: Dimensions.get("window").height,
+    padding: 15,
     backgroundColor: "#fff",
   },
   scrollContainer: {},

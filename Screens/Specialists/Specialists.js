@@ -1,9 +1,11 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, FlatList, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import DoctorsList from "../../data/DoctorsList";
 import styles from "./styles";
 
-const Specialists = () => {
+const Specialists = (props) => {
+  const specialist = props.route.params.specialist;
   return (
     <SafeAreaView style={{ backgroundColor: "#516BEB" }}>
       {/* Header */}
@@ -18,10 +20,30 @@ const Specialists = () => {
           <Text style={styles.backBtnText}>Back</Text>
         </View>
         <View style={styles.titleView}>
-          <Text style={styles.title}>Specialist</Text>
+          <Text style={styles.title}>{specialist}</Text>
         </View>
       </View>
       {/* List */}
+      <View style={styles.docListView}>
+        <FlatList
+          data={DoctorsList}
+          renderItem={({ item }) => (
+            <TouchableOpacity style={styles.docData} activeOpacity={0.7}>
+              <Image
+                style={styles.docImage}
+                source={{
+                  uri: "https://img.icons8.com/external-justicon-flat-justicon/64/000000/external-doctor-hospital-and-medical-justicon-flat-justicon.png",
+                }}
+              />
+              <View>
+                <Text style={styles.docName}>{item.name}</Text>
+                <Text style={styles.docNum}>{item.phoneNum}</Text>
+              </View>
+            </TouchableOpacity>
+          )}
+          keyExtractor={(item) => item.name}
+        />
+      </View>
     </SafeAreaView>
   );
 };

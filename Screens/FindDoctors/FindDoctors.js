@@ -6,7 +6,10 @@ import SearchBar from "../../Components/SearchBar/SearchBar";
 import Specialities from "../../Components/Specialities/Specialities";
 import styles from "./styles";
 
-const FindDoctors = () => {
+const FindDoctors = (props) => {
+  const onPressSpecialities = (specialist) => {
+    props.navigation.navigate("Specialists", { specialist: specialist });
+  };
   return (
     <View>
       <View style={styles.headerContainer}>
@@ -15,7 +18,7 @@ const FindDoctors = () => {
       <View style={styles.lowerContainer}>
         <OffersView />
         <SearchBar />
-        <Specialities />
+        <Specialities onPress={onPressSpecialities} />
       </View>
     </View>
   );

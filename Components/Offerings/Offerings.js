@@ -2,15 +2,20 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import OfferingsData1 from "../../data/OfferingsData";
 import OfferingsData2 from "../../data/OfferingsData2";
+
 import styles from "./styles";
 
-const Offerings = () => {
+const Offerings = (props) => {
   return (
     <View style={styles.offeringsContainer}>
       <Text style={styles.offeringsTitle}>Our Offerings</Text>
       <View style={styles.containDataItems}>
         {OfferingsData1.map((data, index) => (
-          <TouchableOpacity activeOpacity={0.9} key={index}>
+          <TouchableOpacity
+            activeOpacity={0.9}
+            key={index}
+            onPress={props.onPress}
+          >
             <View style={[styles.dataBox, { backgroundColor: data.bgColor }]}>
               <Image style={styles.image} source={{ uri: data.image }} />
               {data.offer ? (

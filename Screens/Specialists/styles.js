@@ -29,6 +29,31 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#fff",
   },
+  docListView: {
+    backgroundColor: "#fff",
+  },
+  docData: {
+    flexDirection: "row",
+    height: 70,
+    backgroundColor: "#F3F1F5",
+    marginTop: 20,
+    alignItems: "center",
+    paddingLeft: 10,
+    borderRadius: 20,
+  },
+  docImage: {
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+    marginRight: 20,
+    borderWidth: 1.5,
+    borderColor: "#fff",
+    backgroundColor: "#FFE3E3",
+  },
+  docName: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
 });
 
 export default styles;

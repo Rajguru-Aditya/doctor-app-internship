@@ -7,14 +7,17 @@ import Offerings from "../../Components/Offerings/Offerings";
 import TopImage from "../../Components/TopImage/TopImage";
 import styles from "./styles";
 
-const Home = () => {
+const Home = (props) => {
+  const onPressOfferings = () => {
+    props.navigation.navigate("FindDoctors");
+  };
   return (
     <SafeAreaView>
       <View style={styles.homeContainer}>
         <Header />
         <Location />
         <TopImage />
-        <Offerings />
+        <Offerings onPress={onPressOfferings} />
       </View>
     </SafeAreaView>
   );

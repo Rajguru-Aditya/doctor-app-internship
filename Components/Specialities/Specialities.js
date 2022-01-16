@@ -12,14 +12,19 @@ import styles from "./styles";
 
 const numColumns = 4;
 
-const Specialities = () => {
+const Specialities = (props) => {
   return (
     <View style={styles.specialitiesContainer}>
       <Text style={styles.title}>Specialities most relevant to you</Text>
       <FlatList
         data={SpecialitiesData}
         renderItem={({ item }) => (
-          <TouchableOpacity style={styles.specialitiesData}>
+          <TouchableOpacity
+            style={styles.specialitiesData}
+            onPress={() => {
+              props.onPress(item.name);
+            }}
+          >
             <Image style={styles.image} source={{ uri: item.image }} />
             <Text style={styles.specialitiesText}>{item.name}</Text>
           </TouchableOpacity>
