@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, ScrollView } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import FindDocHeader from "../../Components/FindDocHeader/FindDocHeader";
 import OffersView from "../../Components/OffersView/OffersView";
 import SearchBar from "../../Components/SearchBar/SearchBar";
@@ -14,11 +13,9 @@ const FindDoctors = () => {
         <FindDocHeader />
       </View>
       <View style={styles.lowerContainer}>
-        <ScrollView style={styles.scrollContainer}>
-          <OffersView />
-          <SearchBar />
-          <Specialities />
-        </ScrollView>
+        <OffersView />
+        <SearchBar />
+        <Specialities />
       </View>
     </View>
   );

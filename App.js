@@ -1,12 +1,14 @@
 import { View, Text } from "react-native";
 import FindDoctors from "./Screens/FindDoctors/FindDoctors";
 import Home from "./Screens/Home/Home";
+import Specialists from "./Screens/Specialists/Specialists";
 
 export default function App() {
   return (
     <View>
       {/* <Home /> */}
-      <FindDoctors />
+      {/* <FindDoctors /> */}
+      <Specialists />
     </View>
   );
 }
