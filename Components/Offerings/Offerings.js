@@ -8,14 +8,16 @@ const Offerings = () => {
   return (
     <View style={styles.offeringsContainer}>
       <Text style={styles.offeringsTitle}>Our Offerings</Text>
-      <View style={styles.containTwo}>
+      <View style={styles.containDataItems}>
         {OfferingsData1.map((data, index) => (
-          <TouchableOpacity activeOpacity={0.9}>
-            <View
-              style={[styles.dataBox, { backgroundColor: data.bgColor }]}
-              key={index}
-            >
+          <TouchableOpacity activeOpacity={0.9} key={index}>
+            <View style={[styles.dataBox, { backgroundColor: data.bgColor }]}>
               <Image style={styles.image} source={{ uri: data.image }} />
+              {data.offer ? (
+                <View style={styles.offer}>
+                  <Text style={styles.offerText}>{data.offer}</Text>
+                </View>
+              ) : null}
               <View style={styles.textContainer}>
                 <Text style={styles.title}>{data.title}</Text>
                 <Text style={styles.subtitle}>{data.subtitle}</Text>
@@ -24,7 +26,7 @@ const Offerings = () => {
           </TouchableOpacity>
         ))}
       </View>
-      <View style={styles.containThree}>
+      <View style={styles.containDataItems}>
         {OfferingsData2.map((data, index) => (
           <View style={styles.dataItemsContainer} key={index}>
             <TouchableOpacity activeOpacity={0.9}>

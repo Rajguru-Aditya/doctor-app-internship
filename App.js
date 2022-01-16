@@ -1,6 +1,12 @@
 import { View, Text } from "react-native";
+import FindDoctors from "./Screens/FindDoctors/FindDoctors";
 import Home from "./Screens/Home/Home";
 
 export default function App() {
-  return <Home />;
+  return (
+    <View>
+      {/* <Home /> */}
+      <FindDoctors />
+    </View>
+  );
 }

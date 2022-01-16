@@ -10,11 +10,7 @@ const styles = StyleSheet.create({
     color: "#333",
     marginBottom: 20,
   },
-  containTwo: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  containThree: {
+  containDataItems: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
@@ -49,6 +45,22 @@ const styles = StyleSheet.create({
     width: "100%",
     resizeMode: "contain",
     marginTop: 20,
+  },
+  offer: {
+    width: 60,
+    height: 20,
+    backgroundColor: "#eee",
+    position: "absolute",
+    top: 10,
+    left: 10,
+    borderRadius: 5,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  offerText: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "#333",
   },
   imageOther: {
     height: 100,

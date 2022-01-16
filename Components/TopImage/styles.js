@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   topImageInnerContainer: {
-    height: 180,
+    height: 170,
     width: 310,
     borderRadius: 30,
     flexDirection: "row",
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1.5,
     borderColor: "#ccc",
-    marginTop: 20,
+    marginTop: 10,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   doctorImg: {
     width: 70,
-    height: 200,
+    height: 190,
     resizeMode: "cover",
     position: "absolute",
     top: -20,
