@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   headerContainer: {
     backgroundColor: "#516BEB",
-    height: 30,
+    height: 60,
     marginHorizontal: 10,
     paddingTop: 30,
     flexDirection: "row",
