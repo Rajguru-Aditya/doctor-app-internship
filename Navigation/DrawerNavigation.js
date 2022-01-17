@@ -57,7 +57,7 @@ function DrawerNav() {
       />
       <Drawer.Screen
         name="My Doctors"
-        component={Home}
+        component={FindDoctors}
         options={{
           title: "My Doctors",
           drawerIcon: () => (
