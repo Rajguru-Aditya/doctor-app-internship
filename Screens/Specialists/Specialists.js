@@ -6,11 +6,16 @@ import styles from "./styles";
 
 const Specialists = (props) => {
   const specialist = props.route.params.specialist;
+  const onPress = props.navigation.goBack;
   return (
     <SafeAreaView style={{ backgroundColor: "#516BEB" }}>
       {/* Header */}
       <View style={styles.headerContainer}>
-        <View style={styles.backBtn}>
+        <TouchableOpacity
+          activeOpacity={0.9}
+          onPress={onPress}
+          style={styles.backBtn}
+        >
           <Image
             source={{
               uri: "https://img.icons8.com/material-outlined/24/ffffff/back--v1.png",
@@ -18,7 +23,7 @@ const Specialists = (props) => {
             style={styles.backIcon}
           />
           <Text style={styles.backBtnText}>Back</Text>
-        </View>
+        </TouchableOpacity>
         <View style={styles.titleView}>
           <Text style={styles.title}>{specialist}</Text>
         </View>

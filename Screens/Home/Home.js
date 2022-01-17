@@ -11,10 +11,13 @@ const Home = (props) => {
   const onPressOfferings = () => {
     props.navigation.navigate("FindDoctors");
   };
+  const onPressOpenDrawer = () => {
+    props.navigation.openDrawer();
+  };
   return (
     <SafeAreaView>
       <View style={styles.homeContainer}>
-        <Header />
+        <Header onPress={onPressOpenDrawer} />
         <Location />
         <TopImage />
         <Offerings onPress={onPressOfferings} />

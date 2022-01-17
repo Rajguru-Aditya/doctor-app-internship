@@ -10,10 +10,13 @@ const FindDoctors = (props) => {
   const onPressSpecialities = (specialist) => {
     props.navigation.navigate("Specialists", { specialist: specialist });
   };
+  const onPressBack = () => {
+    props.navigation.goBack();
+  };
   return (
     <View>
       <View style={styles.headerContainer}>
-        <FindDocHeader />
+        <FindDocHeader onPress={onPressBack} />
       </View>
       <View style={styles.lowerContainer}>
         <OffersView />
